@@ -1,0 +1,29 @@
+/* Color Theme Swatches in Hex */
+
+:root {
+    --black : #403F45; 
+    --navy : #363C5C; 
+    --green-1 : #00b779; 
+    --green-2 : #039162; 
+    --white : #EFEFEF; 
+  }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--green-1);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-2);
+}
