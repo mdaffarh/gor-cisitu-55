@@ -16,13 +16,15 @@
     @include('sweetalert::alert')
 
     <nav class="navbar navbar-expand-md fixed-top navbar-shrink py-3 navbar-light bg-success" id="mainNav">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#header"><img
-                    src="img/cisitu55.png" width="140"></a><button data-bs-toggle="collapse" class="navbar-toggler"
-                data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
-                    navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#header"><img src="img/cisitu55.png"
+                    width="140"></a>
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+                <span class="visually-hidden">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"></li>
                     <li class="nav-item"><a class="nav-link" href="#header"><strong>Tentang Kami</strong></a></li>
                     <li class="nav-item"><a class="nav-link" href="#facility"><strong>Fasilitas</strong></a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonies"><strong>Testimoni</strong></a></li>
@@ -50,7 +52,7 @@
                             </li>
                         </ul>
                     @else --}}
-                    <a class="btn btn-primary shadow" role="button" href="/login">Masuk</a>
+                    {{-- <a class="btn btn-primary shadow" role="button" href="/login">Masuk</a> --}}
                     {{-- @endauth --}}
                 </ul>
             </div>
@@ -81,14 +83,14 @@
         <div class="container py-4 py-xl-5">
             <h2 class="text-center fw-bold text-white my-5">Fasilitas</h2>
             <div class="row gy-4">
-                <div class="col-md-6" data-aos="fade-up">
+                <div class="col-12" data-aos="fade-up">
                     <div class="card d-flex justify-content-center">
                         <div class="card-body" style="padding:0px;">
                             <img src="{{ asset('img/fasilitas1.jpg') }}" class="img-fluid" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6" data-aos="fade-up">
+                <div class="col-12" data-aos="fade-up">
                     <div class="card d-flex justify-content-center">
                         <div class="card-body" style="padding:0px;">
                             <img src="{{ asset('img/fasilitas2.jpg') }}" class="img-fluid" alt="">
