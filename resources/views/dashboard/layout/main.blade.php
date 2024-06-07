@@ -52,23 +52,31 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav" id="accordionSidebar">
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="{{ Request::is('dashboard') ? 'active' : '' }} nav-link" href="/dashboard">
                             <i class=" fa solid fa-chart-line"></i>
                             <span class="ms-md-1">Dashboard</span>
                         </a>
-                    </li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/rentals*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/rentals"><i class="  fa solid fa-table"></i><span
-                                class="ms-md-2">Penyewaan</span>
+                    </li> --}}
+                    <li class="nav-item"><a class="{{ Request::is('dashboard/penyewaan*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/penyewaan"><i class="  fa solid fa-table"></i><span
+                                class="ms-md-2">Penyewaan
+                                Lapangan</span>
                         </a>
                     </li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/payments*') ? 'active' : '' }} nav-link"
+                    {{-- <li class="nav-item"><a class="{{ Request::is('dashboard/payments*') ? 'active' : '' }} nav-link"
                             href="/dashboard/payments"><i class="  fa solid fa-money-bill"></i><span
                                 class="ms-md-1">Pembayaran</span>
                         </a>
-                    </li>
+                    </li> --}}
                     <hr>
+                    <li class="nav-item">
+                        <a class="{{ Request::is('dashboard/membership*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/membership">
+                            <i class="fa solid fa-users"></i>
+                            <span>Membership</span>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="{{ Request::is('dashboard/fasilitas*') ? 'active' : '' }} nav-link"
                             href="/dashboard/fasilitas">
@@ -76,18 +84,15 @@
                             <span class="ms-md-1">Fasilitas</span>
                         </a>
                     </li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/users*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/users"><i class="fas fa-user"></i><span class="ms-md-2">Pelanggan</span>
+                    <li class="nav-item"><a
+                            class="{{ Request::is('dashboard/fasilitas-tambahan*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/fasilitas-tambahan"><i class="fas fa-plus"></i><span
+                                class="ms-md-2">Fasilitas Tambahan</span>
                         </a>
                     </li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/categories*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/categories"><i class="fa solid fa-list"></i><span
-                                class="ms-md-2">Kategori</span>
-                        </a>
-                    </li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/brands*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/brands"><i class="fa solid fa-certificate"></i><span
-                                class="ms-md-2">Merek</span>
+                    <li class="nav-item"><a class="{{ Request::is('dashboard/vouchers*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/vouchers"><i class="fa solid fa-percent"></i><span
+                                class="ms-md-2">Voucher</span>
                         </a>
                     </li>
                     <hr>
@@ -156,7 +161,8 @@
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright Yuk! Kemah © 2024 (Template by Bootstrap
+                    <div class="text-center my-auto copyright"><span>Copyright Gor Cisitu 55 © 2024 (Template by
+                            Bootstrap
                             Studio)</span></div>
                 </div>
             </footer>
