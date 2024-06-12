@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
@@ -26,7 +25,7 @@ class LoginController extends Controller
                 request()->session()->regenerate();
 
                 toast('Berhasil login!', 'success');
-                return redirect()->intended('/dashboard');
+                return redirect()->intended('/dashboard/booking');
             }
         }
 

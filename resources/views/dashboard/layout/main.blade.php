@@ -1,4 +1,5 @@
 {{-- Sweetalert --}}
+
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
 
@@ -52,23 +53,15 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav" id="accordionSidebar">
-                    {{-- <li class="nav-item">
-                        <a class="{{ Request::is('dashboard') ? 'active' : '' }} nav-link" href="/dashboard">
-                            <i class=" fa solid fa-chart-line"></i>
-                            <span class="ms-md-1">Dashboard</span>
-                        </a>
-                    </li> --}}
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/penyewaan*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/penyewaan"><i class="  fa solid fa-table"></i><span
-                                class="ms-md-2">Penyewaan
+                    <li class="nav-item"><a class="{{ Request::is('dashboard/booking*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/booking"><i class="  fa solid fa-table"></i><span class="ms-md-2">Penyewaan
                                 Lapangan</span>
                         </a>
                     </li>
-                    {{-- <li class="nav-item"><a class="{{ Request::is('dashboard/payments*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/payments"><i class="  fa solid fa-money-bill"></i><span
-                                class="ms-md-1">Pembayaran</span>
+                    <li class="nav-item"><a class="{{ Request::is('dashboard/jadwal*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/jadwal/cek-jadwal"><i class="  fa solid fa-clock"></i><span class="ms-md-2">Cek Jadwal</span>
                         </a>
-                    </li> --}}
+                    </li>
                     <hr>
                     <li class="nav-item">
                         <a class="{{ Request::is('dashboard/membership*') ? 'active' : '' }} nav-link"
@@ -78,20 +71,20 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="{{ Request::is('dashboard/fasilitas*') ? 'active' : '' }} nav-link"
+                        <a class="{{ Request::is('dashboard/fasilitas') || Request::is('dashboard/fasilitas/*') ? 'active' : '' }} nav-link"
                             href="/dashboard/fasilitas">
                             <i class="fa solid fa-border-all"></i>
                             <span class="ms-md-1">Fasilitas</span>
                         </a>
                     </li>
                     <li class="nav-item"><a
-                            class="{{ Request::is('dashboard/fasilitas-tambahan*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/fasilitas-tambahan"><i class="fas fa-plus"></i><span
+                            class="{{ Request::is('dashboard/fasilitas_tambahan*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/fasilitas_tambahan"><i class="fas fa-plus"></i><span
                                 class="ms-md-2">Fasilitas Tambahan</span>
                         </a>
                     </li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/vouchers*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/vouchers"><i class="fa solid fa-percent"></i><span
+                    <li class="nav-item"><a class="{{ Request::is('dashboard/voucher*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/voucher"><i class="fa solid fa-percent"></i><span
                                 class="ms-md-2">Voucher</span>
                         </a>
                     </li>
@@ -157,15 +150,9 @@
                         </ul>
                     </div>
                 </nav>
+
                 @yield('container')
             </div>
-            <footer class="bg-white sticky-footer">
-                <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright Gor Cisitu 55 © 2024 (Template by
-                            Bootstrap
-                            Studio)</span></div>
-                </div>
-            </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
